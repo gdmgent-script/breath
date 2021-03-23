@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+
+:root {
+
+    /* Colors: */
+    --white-color: #FFFFFF;
+    --puple-900-color: #151A6A;
+    --purple-300-color: #C4A2FC;
+    --blue-900-color-: #252C3E;
+    }
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 785px;
+    flex-direction:row;
+}
+.main-content{
+    width: 785px;
+    min-width: 785px;
+    height: 591px;
+    background: transparent url('img/bg.png') 0% 0% no-repeat padding-box;
+    background-size: contain;
+    position: relative;
+    
+}
+
+.bar{
+    position: absolute;
+    top: 360px;
+    left: 290px;
+    width: 0px;
+    height: 10px;
+    background: var(--puple-900-color) 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+
+    /* animation-name: bar-transform ;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    /* animation: linear bar-transform 4s infinite alternate; */
+}
+.bar-bg{
+    position: absolute;
+    top: 360px;
+    left: 290px;
+    width: 206px;
+    height: 10px;
+    background: var(--white-color) 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+
+}
+.txt{
+    position: absolute;
+    top: 260px;
+    right: 290px;
+    color: var(--puple-900-color);
+text-align: right;
+font: normal normal bold 41px/48px Roboto;
+text-transform: uppercase;
+}
+
+
+#logo-icon{
+    position: absolute;
+    top: 223px;
+    left: 316px;
+    width: 165px;
+    height: 153px;
+    background: transparent url('img/overview.svg') 0% 0% no-repeat padding-box;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+/* The animation code */
+@keyframes bar-transform {
+  0% { width: 0px;}
+  50% { width: 206px;}
+  
+}
+
+@keyframes to-smaller-icon {
+  0% { width: 165px;  left: 316px;}
+  50% { width: 95px;  left: 296px;}
+  
+}
