@@ -7,9 +7,10 @@
     --white-color: #FFFFFF;
     --puple-900-color: #151A6A;
     --purple-300-color: #C4A2FC;
-    --blue-900-color-: #252C3E;
+    --blue-900-color: #252C3E;
     }
 body{
+    background-color: var(--blue-900-color);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -34,13 +35,6 @@ body{
     height: 10px;
     background: var(--puple-900-color) 0% 0% no-repeat padding-box;
     border-radius: 4px;
-
-    /* animation-name: bar-transform ;
-    animation-duration: 4s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; */
-    /* animation: linear bar-transform 4s infinite alternate; */
 }
 .bar-bg{
     position: absolute;
@@ -74,15 +68,10 @@ text-transform: uppercase;
     cursor: pointer;
 }
 
-/* The animation code */
-@keyframes bar-transform {
-  0% { width: 0px;}
-  50% { width: 206px;}
-  
-}
-
-@keyframes to-smaller-icon {
-  0% { width: 165px;  left: 316px;}
-  50% { width: 95px;  left: 296px;}
-  
+#numBreaths{
+    font: normal normal bold 60px/48px Roboto;
+    color: var(--white-color);
+    position: absolute;
+    top:20px;
+    right:20px;
 }
