@@ -1,20 +1,23 @@
+//Elements
 const logoIcon = document.getElementById('logo-icon');;
 const divBar = document.querySelector('.bar');
 const divBarBg = document.querySelector('.bar-bg');
 const txt = document.querySelector('.txt');
-const numOfBreaths = document.getElementById('numBreaths');;
+const txtStart = document.querySelector('.start');
+const numOfBreaths = document.getElementById('numBreaths');
+
 
 let iterationCount = 0;
 
 const animateLogo = () => {
   let logoAnimation = logoIcon.animate([
     {
-      width: '165px',
-      left: '316px'
+      width: '50%',
+      left: '30%'
     },
     {
-      width: '95px',
-      left: '296px'
+      width: '30%',
+      left: '20%'
     }
   ], {
     duration: 1000,
@@ -36,7 +39,7 @@ const animateBarIn = () => {
       width: '0px'
     },
     {
-      width: '206px'
+      width: '74%'
     }
   ], {
     duration: 4000,
@@ -57,7 +60,7 @@ const animateBarIn = () => {
 const animateBarOut = () => {
   const barAnimation = divBar.animate([
     {
-      width: '206px'
+      width: '74%'
     },
     {
       width: '0px'
@@ -80,7 +83,14 @@ const animateBarOut = () => {
 }
 
 const init = () => {
-  logoIcon.addEventListener('click', animateLogo);
+  logoIcon.addEventListener('click', () => {
+    txtStart.style.display = "none";
+    animateLogo()
+  });
+  txtStart.addEventListener('click', () => {
+    txtStart.style.display = "none";
+    animateLogo()
+  });
   divBar.style.display = 'none';
   divBarBg.style.display = 'none';
   txt.style.display = 'none';
